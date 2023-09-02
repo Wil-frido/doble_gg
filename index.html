@@ -13,6 +13,15 @@
 
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<script>
+			const playSound = function() {
+				document.getElementById('audioelement').play();
+				document.removeEventListener('click', playSound);
+			}
+			document.addEventListener('click', playSound);
+		</script>
+
 	</head>
 	<body class="is-preload landing">
 		<div id="page-wrapper">
@@ -177,8 +186,8 @@
 								<section class="col-4 col-6-medium col-12-xsmall" style="display: grid; place-items: center;">
 									<!-- <span class="icon solid alt major fa-file"></span> -->
 									<p>No creo que sea el mejor regalo, no creo que sea el primero y seguramente no será el último que recibas, no creo que sea el regalo de la persona que esperas, no creo que sea bueno, no podrá ser nada de eso, pero es con mucho cariño y lo hice para y por ti. <3</p>
-										<audio controls>
-											<source src="forelisa.mp3" type="audio/mp3">
+										<audio loop id="audioelement">
+											<source src="images/zoe_lab_rot.mp3" type="audio/mp3">
 
 											</audio>
 									
